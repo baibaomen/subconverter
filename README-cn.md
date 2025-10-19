@@ -7,6 +7,24 @@
 [![GitHub release](https://img.shields.io/github/release/tindy2013/subconverter.svg)](https://github.com/tindy2013/subconverter/releases)
 [![GitHub license](https://img.shields.io/github/license/tindy2013/subconverter.svg)](https://github.com/tindy2013/subconverter/blob/master/LICENSE)
 
+## ⭐ 新功能：独立转换函数
+
+**现已提供独立的转换函数！** 无需运行Web服务器，可以直接在你的C++代码中将任何订阅（包括JustMySocks）转换为Clash格式。
+
+📖 [完整文档](./STANDALONE_CONVERTER.md) | [English Documentation](./STANDALONE_CONVERTER_EN.md)
+
+```cpp
+#include "converter/standalone_converter.h"
+
+std::string error;
+std::string clash_config = convertSubscriptionToClash(
+    "https://justmysocks.net/members/getsub.php?service=xxx&id=xxx",
+    error
+);
+```
+
+完美适合将订阅转换功能集成到你自己的应用程序中！
+
 * * *
 
 ## 新增内容

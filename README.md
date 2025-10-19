@@ -7,6 +7,26 @@ Utility to convert between various proxy subscription formats.
 [![GitHub release](https://img.shields.io/github/release/tindy2013/subconverter.svg)](https://github.com/tindy2013/subconverter/releases)
 [![GitHub license](https://img.shields.io/github/license/tindy2013/subconverter.svg)](https://github.com/tindy2013/subconverter/blob/master/LICENSE)
 
+## ⭐ NEW: Standalone Converter Function
+
+**A new standalone function is now available!** Convert any subscription (including JustMySocks) to Clash format directly in your C++ code without running the web server.
+
+📖 [English Documentation](./STANDALONE_CONVERTER_EN.md) | [中文文档](./STANDALONE_CONVERTER.md)
+
+```cpp
+#include "converter/standalone_converter.h"
+
+std::string error;
+std::string clash_config = convertSubscriptionToClash(
+    "https://justmysocks.net/members/getsub.php?service=xxx&id=xxx",
+    error
+);
+```
+
+Perfect for integrating subscription conversion into your own applications!
+
+---
+
 [Docker README](https://github.com/tindy2013/subconverter/blob/master/README-docker.md)
 
 [中文文档](https://github.com/tindy2013/subconverter/blob/master/README-cn.md)
